@@ -1,0 +1,33 @@
+<div>
+    <h3>Editar Filme</h3>
+</div>
+<form class="example-container" [formGroup]="filmeForm" (ngSubmit)="updateFilme(filmeForm.value)">
+<div>
+    <mat-form-field>
+        <input matInput name="nome" placeholder="Nome do Filme" formControlName="nome">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput name="ano" placeholder="Ano do filme" formControlName="ano">
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+        <textarea  matInput name="diretor" placeholder="Diretor do Filme" formControlName="diretor"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <textarea  matInput name="genero" placeholder="Genero do Filme" formControlName="genero"></textarea>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+        <textarea  matInput name="descricao" placeholder="Descricao do Filme" formControlName="descricao"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <textarea  matInput name="poster" placeholder="Poster do Filme" formControlName="poster"></textarea>
+    </mat-form-field>
+</div>
+
+<textarea hidden matInput name="id" formControlName="id">[id]</textarea>
+
+<button type="submit" [disabled]="!filmeForm.valid" mat-button >Editar</button>
+</form>

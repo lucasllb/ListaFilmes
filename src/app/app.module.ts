@@ -19,11 +19,18 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
 
 import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './menu/menu.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { FilmeNovoComponent } from './filme-novo/filme-novo.component';
+import { FilmeEditarComponent } from './filme-editar/filme-editar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmesComponent,
+    MenuComponent,
+    FilmeNovoComponent,
+    FilmeEditarComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +50,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSelectModule,
     MatSidenavModule,  
     MatTableModule,
-    MatToolbarModule
+    MatToolbarModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,28 @@
+<div>
+    <h3>Adicionar Novo Filme</h3>
+</div>
+  <form style="height: 100%; width: 100%;" class="example-container" [formGroup]="filmeForm" (ngSubmit)="addFilme(filmeForm.value)">
+    <mat-form-field>
+      <input matInput name="nome" placeholder="Nome do Filme" formControlName="nome">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name="ano" placeholder="Ano do filme" formControlName="ano">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <textarea  matInput name="diretor" placeholder="Diretor do filme" formControlName="diretor"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea  matInput name="genero" placeholder="Genero do filme" formControlName="genero"></textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <textarea  matInput name="descricao" placeholder="Descricao do filme" formControlName="descricao"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea  matInput name="poster" placeholder="Poster do filme(link)" formControlName="poster"></textarea>
+    </mat-form-field>
+    <br>
+    <button type="submit" [disabled]="!filmeForm.valid" mat-button >Adicionar</button>
+  </form>
+

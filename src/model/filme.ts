@@ -5,4 +5,5 @@ export class Filme {
     diretor: String;
     genero: String;
     descricao: String;
+    id: number;
 }
